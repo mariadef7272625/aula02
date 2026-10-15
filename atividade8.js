@@ -6,14 +6,14 @@ var operacao = ""; // O operador == vai comparar esta variável com as opções 
 var resultado;
 // O == compara se o valor de 'operacao' é igual ao sinal de texto correspondente
 if (operacao == "+") {
-    resultado = num1 + num2;
+    resultado = num1 + num2;
 } else if (operacao == "-") {
-    resultado = num1 - num2;
+    resultado = num1 - num2;
 } else if (operacao == "") {
-    resultado = num1 * num2;
+    resultado = num1 * num2;
 } else if (operacao == "/") {
-    resultado = num1 / num2;
+    resultado = num1 / num2;
 } else {
-    resultado = "Operação inválida!";
+    resultado = "Operação inválida!";
 }
 console.log("Resultado: " + resultado);

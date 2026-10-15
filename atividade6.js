@@ -10,7 +10,7 @@ var media = (nota1 + nota2 + nota3) / 3;
 
 // Verificando a situação
 if (media >= 7) {
-    console.log(nome + " está aprovado.");
+    console.log(nome + " está aprovado.");
 } else {
-    console.log(nome + " está reprovado.");
+    console.log(nome + " está reprovado.");
 }

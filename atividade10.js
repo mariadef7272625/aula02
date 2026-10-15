@@ -11,12 +11,12 @@ var limiteDeDias = 31;
 // PASSO 3: Se o mês for Abril(4), Junho(6), Setembro(9) ou Novembro(11)...
 // Mudamos o limite para 30 dias.
 if (mes == 4 || mes == 6 || mes == 9 || mes == 11) {
-    limiteDeDias = 30;
+    limiteDeDias = 30;
 } 
 
 // PASSO 4: Mas se o mês for Fevereiro(2), precisamos fazer uma checagem especial.
 else if (mes == 2) {
-    /* 
+    /* 
        EXPLICAÇÃO DETALHADA DO PASSO 4:
        Fevereiro é o único mês que muda de tamanho (28 ou 29 dias) dependendo do ano.
        Para descobrir se o ano é bissexto, usamos o símbolo "%" (Módulo), que descobre o RESTO de uma divisão.
@@ -28,20 +28,20 @@ else if (mes == 2) {
        OU (||)
        Condição B: Ser divisível por 400 (ano % 400 == 0). -> (Isso corrige os anos que terminam em "00")
     */
-    if ((ano % 4 == 0 && ano % 100 != 0) || ano % 400 == 0) {
-        limiteDeDias = 29; // Se passou no teste acima: Ano bissexto = Fevereiro tem 29 dias
-    } else {
-        limiteDeDias = 28; // Se falhou no teste acima: Ano comum = Fevereiro tem 28 dias
-    }
+    if ((ano % 4 == 0 && ano % 100 != 0) || ano % 400 == 0) {
+    limiteDeDias = 29; // Se passou no teste acima: Ano bissexto = Fevereiro tem 29 dias
+    } else {
+    limiteDeDias = 28; // Se falhou no teste acima: Ano comum = Fevereiro tem 28 dias
+    }
 }
 
 // PASSO 5: A grande checagem final!
 // O operador "&&" significa "E". Então o computador só aceita se TODAS as condições forem verdadeiras:
 if (ano > 0 && mes >= 1 && mes <= 12 && dia >= 1 && dia <= limiteDeDias) {
-    // Se tudo deu certo, a data existe!
-    console.log("A data " + dia + "/" + mes + "/" + ano + " é VÁLIDA!");
+// Se tudo deu certo, a data existe!
+    console.log("A data " + dia + "/" + mes + "/" + ano + " é VÁLIDA!");
 } else {
-    // Se qualquer uma das regras ali de cima falhar, a data não existe.
-    console.log("A data " + dia + "/" + mes + "/" + ano + " é INVÁLIDA!");
+// Se qualquer uma das regras ali de cima falhar, a data não existe.
+    console.log("A data " + dia + "/" + mes + "/" + ano + " é INVÁLIDA!");
 }
 
